@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fafb;
+  --foreground: #0f2a33;
+
+  --color-brand-50: #eefbfb;
+  --color-brand-100: #d3f3f4;
+  --color-brand-200: #a8e6e9;
+  --color-brand-300: #71d2d8;
+  --color-brand-400: #3cb4bf;
+  --color-brand-500: #1f939f;
+  --color-brand-600: #147582;
+  --color-brand-700: #135e6a;
+  --color-brand-800: #0f4a56;
+  --color-brand-900: #0a3038;
+  --color-brand-950: #061e24;
+
+  --color-gold-300: #ffe08a;
+  --color-gold-400: #ffcd47;
+  --color-gold-500: #f4b400;
+  --color-gold-600: #d99400;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-poppins);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+  --color-brand-950: var(--color-brand-950);
+
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-poppins), var(--font-jakarta), Arial, Helvetica, sans-serif;
+}
+
+.sparkle-bg {
+  background-image: radial-gradient(circle at 20% 20%, rgba(244, 180, 0, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(60, 180, 191, 0.25), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(15, 74, 86, 0.35), transparent 45%);
 }
