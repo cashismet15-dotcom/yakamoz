@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb";
-import QuoteForm from "@/components/QuoteForm";
+import PriceCalculator from "@/components/PriceCalculator";
 import FAQSection from "@/components/FAQSection";
 import { siteConfig } from "@/lib/site-config";
 import { districts, type District } from "@/lib/districts";
@@ -74,7 +74,7 @@ export default function DistrictPageBody({ district }: { district: District }) {
             <p className="mt-4 text-xs text-brand-900/55">{district.mahalleNote}</p>
           </div>
 
-          <QuoteForm defaultDistrict={district.name} />
+          <PriceCalculator />
         </div>
       </section>
 

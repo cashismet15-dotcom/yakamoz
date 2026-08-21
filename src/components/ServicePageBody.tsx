@@ -1,9 +1,14 @@
 import Breadcrumb from "@/components/Breadcrumb";
-import QuoteForm from "@/components/QuoteForm";
+import PriceCalculator from "@/components/PriceCalculator";
 import FAQSection from "@/components/FAQSection";
 import { siteConfig } from "@/lib/site-config";
 import { districts } from "@/lib/districts";
 import { type ServicePage } from "@/lib/services";
+
+const defaultTabBySlug: Record<string, "hali" | "stor-perde" | "yorgan-battaniye"> = {
+  "stor-perde-yikama": "stor-perde",
+  "yorgan-battaniye-yikama": "yorgan-battaniye",
+};
 
 export default function ServicePageBody({ service }: { service: ServicePage }) {
   const serviceJsonLd = {
@@ -62,7 +67,10 @@ export default function ServicePageBody({ service }: { service: ServicePage }) {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
-        <QuoteForm defaultService={service.name} className="max-w-xl" />
+        <PriceCalculator
+          defaultTab={defaultTabBySlug[service.slug] ?? "hali"}
+          className="max-w-xl"
+        />
       </section>
 
       <FAQSection items={service.faq} title={`${service.name} Hakkında Sık Sorulan Sorular`} />
