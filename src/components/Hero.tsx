@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 const badges = [
@@ -63,30 +64,16 @@ export default function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 shadow-2xl ring-1 ring-white/10">
-            <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_25%_15%,#ffffff_1px,transparent_1px),radial-gradient(circle_at_70%_45%,#ffffff_1px,transparent_1px),radial-gradient(circle_at_40%_70%,#ffffff_1px,transparent_1px),radial-gradient(circle_at_85%_80%,#ffffff_1px,transparent_1px)] [background-size:60px_60px,80px_80px,50px_50px,70px_70px]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid h-28 w-28 place-items-center rounded-full bg-gold-400/90 text-brand-950 shadow-xl shadow-gold-400/30 sm:h-36 sm:w-36">
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M4 16c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M4 11c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    opacity="0.6"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p className="absolute bottom-6 left-0 right-0 px-6 text-center text-sm text-brand-100/70">
-              Fotoğraf alanı — ekip / çalışma görseli
-            </p>
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-brand-950 shadow-2xl ring-1 ring-white/10">
+            <Image
+              src="/media/hero-calisma.gif"
+              alt="Yakamoz Halı Yıkama'da halı yıkama sürecinden bir görüntü"
+              width={538}
+              height={680}
+              unoptimized
+              priority
+              className="h-full w-full object-cover"
+            />
           </div>
 
           <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white px-5 py-4 shadow-xl sm:block">
