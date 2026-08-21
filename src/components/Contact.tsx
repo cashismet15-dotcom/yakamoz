@@ -59,13 +59,13 @@ export default function Contact() {
 
           <div className="rounded-2xl bg-white/5 p-6 text-left ring-1 ring-white/10">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-400">
-              Adres
+              Hizmet Bölgesi
             </p>
             <p className="mt-2 text-sm leading-relaxed text-brand-100/80">
-              {siteConfig.addressLine}
+              {siteConfig.serviceDistricts.join(", ")}
             </p>
             <p className="mt-1 text-xs text-brand-100/50">
-              {siteConfig.serviceArea}
+              Ücretsiz kapıdan alım-teslim
             </p>
           </div>
 

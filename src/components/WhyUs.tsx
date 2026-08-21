@@ -1,7 +1,7 @@
 const reasons = [
   {
     title: "Ücretsiz Kapıdan Alım-Teslim",
-    desc: "Siz sadece arayın, gerisini biz halledelim. Ankara geneli alım ve teslimat ücretsizdir.",
+    desc: "Siz sadece arayın, gerisini biz halledelim. Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'de alım ve teslimat ücretsizdir.",
   },
   {
     title: "Organik ve Sağlıklı Yıkama",

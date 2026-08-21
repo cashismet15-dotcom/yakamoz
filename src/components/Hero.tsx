@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 
 const badges = [
-  { value: "Ankara Geneli", label: "Ücretsiz Servis" },
+  { value: "İstanbul Avrupa Yakası", label: "Ücretsiz Servis" },
   { value: "5.000+", label: "Temizlenen Halı" },
   { value: "%100", label: "Garantili Hizmet" },
 ];
@@ -15,11 +15,11 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:items-center lg:py-28">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-gold-300 ring-1 ring-white/15">
-            Ankara Geneli Ücretsiz Servis · Garantili Hizmet
+            Esenyurt · Avcılar · Beylikdüzü · Başakşehir · Küçükçekmece
           </span>
 
           <h1 className="mt-5 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Ankara&apos;da Halılar Tertemiz!
+            İstanbul&apos;da Halılar Tertemiz!
             <br />
             <span className="text-gold-400">Yakamoz</span> Gibi Parlasın
           </h1>
@@ -28,8 +28,9 @@ export default function Hero() {
             Yakamoz Halı Yıkama olarak halılarınızı önce tozlarından
             arındırıyor, ardından köpüklü ve titiz bir yıkama işlemiyle
             tertemiz hale getiriyoruz. Halılarınız kapınızdan alınır, tertemiz
-            şekilde kapınıza teslim edilir — Ankara geneli ücretsiz servis,
-            garantili hizmet ve güler yüzlü ekiple.
+            şekilde kapınıza teslim edilir — Esenyurt, Avcılar, Beylikdüzü,
+            Başakşehir ve Küçükçekmece&apos;de ücretsiz servis, garantili
+            hizmet ve güler yüzlü ekiple.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

@@ -1,25 +1,19 @@
 import { siteConfig } from "@/lib/site-config";
+import { districts } from "@/lib/districts";
+import { servicePages } from "@/lib/services";
 
 const quickLinks = [
-  { href: "#hizmetler", label: "Hizmetler" },
-  { href: "#neden-biz", label: "Neden Biz" },
-  { href: "#surec", label: "Süreç" },
-  { href: "#iletisim", label: "İletişim" },
-];
-
-const services = [
-  "Halı Yıkama",
-  "Koltuk Yıkama",
-  "Yorgan & Battaniye Yıkama",
-  "Perde Yıkama",
-  "Leke Çıkarma",
+  { href: "/#hizmetler", label: "Hizmetler" },
+  { href: "/#neden-biz", label: "Neden Biz" },
+  { href: "/#surec", label: "Süreç" },
+  { href: "/#iletisim", label: "İletişim" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-brand-950 text-brand-100/80">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <div className="flex items-center gap-2.5">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 font-heading text-lg font-bold text-gold-400">
@@ -57,8 +51,29 @@ export default function Footer() {
               Hizmetlerimiz
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {services.map((s) => (
-                <li key={s}>{s}</li>
+              <li>Halı Yıkama</li>
+              {servicePages.map((s) => (
+                <li key={s.slug}>
+                  <a href={`/${s.slug}`} className="hover:text-gold-300">
+                    {s.name}
+                  </a>
+                </li>
+              ))}
+              <li>Leke Çıkarma</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-sm font-bold text-white">
+              Hizmet Bölgeleri
+            </h3>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {districts.map((d) => (
+                <li key={d.slug}>
+                  <a href={`/${d.slug}`} className="hover:text-gold-300">
+                    {d.name}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -78,7 +93,9 @@ export default function Footer() {
                   {siteConfig.email}
                 </a>
               </li>
-              <li className="text-brand-100/60">{siteConfig.addressLine}</li>
+              <li className="text-brand-100/60">
+                {siteConfig.serviceDistricts.join(", ")}
+              </li>
             </ul>
           </div>
         </div>

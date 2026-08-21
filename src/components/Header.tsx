@@ -4,11 +4,11 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
-  { href: "#hizmetler", label: "Hizmetler" },
-  { href: "#neden-biz", label: "Neden Biz" },
-  { href: "#surec", label: "Süreç" },
-  { href: "#yorumlar", label: "Yorumlar" },
-  { href: "#iletisim", label: "İletişim" },
+  { href: "/#hizmetler", label: "Hizmetler" },
+  { href: "/#bolgeler", label: "Bölgeler" },
+  { href: "/#neden-biz", label: "Neden Biz" },
+  { href: "/#surec", label: "Süreç" },
+  { href: "/#iletisim", label: "İletişim" },
 ];
 
 export default function Header() {
@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#top" className="flex min-w-0 items-center gap-2.5">
+        <a href="/" className="flex min-w-0 items-center gap-2.5">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-800 text-lg font-bold text-gold-400 font-heading">
             Y
           </span>
@@ -46,7 +46,7 @@ export default function Header() {
             {siteConfig.phoneDisplay}
           </a>
           <a
-            href="#iletisim"
+            href="/#iletisim"
             className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-brand-600/30 transition hover:bg-brand-700"
           >
             Ücretsiz Teklif Al
@@ -89,7 +89,7 @@ export default function Header() {
               {siteConfig.phoneDisplay}
             </a>
             <a
-              href="#iletisim"
+              href="/#iletisim"
               onClick={() => setOpen(false)}
               className="rounded-full bg-brand-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
