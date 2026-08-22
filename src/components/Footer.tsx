@@ -4,6 +4,7 @@ import { districts } from "@/lib/districts";
 import { servicePages } from "@/lib/services";
 
 const quickLinks = [
+  { href: "/siparis-ver", label: "Sipariş Ver" },
   { href: "/#hizmetler", label: "Hizmetler" },
   { href: "/#fiyat-hesapla", label: "Fiyat Hesapla" },
   { href: "/#bolgeler", label: "Bölgeler" },

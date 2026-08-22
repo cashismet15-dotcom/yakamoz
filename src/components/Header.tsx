@@ -50,10 +50,10 @@ export default function Header() {
             {siteConfig.phoneDisplay}
           </a>
           <Link
-            href="/#iletisim"
+            href="/siparis-ver"
             className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-brand-600/30 transition hover:bg-brand-700"
           >
-            Ücretsiz Teklif Al
+            Sipariş Ver
           </Link>
         </div>
 
@@ -93,11 +93,11 @@ export default function Header() {
               {siteConfig.phoneDisplay}
             </a>
             <Link
-              href="/#iletisim"
+              href="/siparis-ver"
               onClick={() => setOpen(false)}
               className="rounded-full bg-brand-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
-              Ücretsiz Teklif Al
+              Sipariş Ver
             </Link>
           </div>
         </div>

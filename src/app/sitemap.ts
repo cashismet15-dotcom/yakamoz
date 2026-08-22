@@ -14,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${siteConfig.url}/siparis-ver`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     ...districts.map((district) => ({
       url: `${siteConfig.url}/${district.slug}`,
       lastModified,
