@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 const badges = [
@@ -65,13 +64,16 @@ export default function Hero() {
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-brand-950 shadow-2xl ring-1 ring-white/10">
-            <Image
-              src="/media/hero-calisma.gif"
-              alt="Yakamoz Halı Yıkama'da halı yıkama sürecinden bir görüntü"
+            <video
+              src="/media/hero-calisma.mp4"
+              aria-label="Yakamoz Halı Yıkama'da halı yıkama sürecinden bir görüntü"
               width={538}
               height={680}
-              unoptimized
-              priority
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
               className="h-full w-full object-cover"
             />
           </div>

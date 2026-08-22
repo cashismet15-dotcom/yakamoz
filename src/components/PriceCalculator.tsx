@@ -52,7 +52,7 @@ export default function PriceCalculator({
   }, [tab, m2, metre, adet, selectedCarpet]);
 
   const fieldClass =
-    "w-full rounded-xl border border-brand-100 bg-white px-4 py-3 text-sm text-brand-950 outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/20";
+    "w-full rounded-xl border border-brand-100 bg-white px-4 py-3 text-base sm:text-sm text-brand-950 outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/20";
 
   function whatsappHref() {
     if (!result) return siteConfig.whatsappHref;

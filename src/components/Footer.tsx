@@ -23,6 +23,7 @@ export default function Footer() {
               alt="Yakamoz Halı Yıkama"
               width={1709}
               height={801}
+              sizes="200px"
               className="h-20 w-auto rounded-xl bg-white/95 p-2"
             />
             <p className="mt-4 text-sm italic text-gold-300">
