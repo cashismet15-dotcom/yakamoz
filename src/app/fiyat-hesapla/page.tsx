@@ -64,6 +64,18 @@ export default function FiyatHesaplaPage() {
 
         <section className="mx-auto max-w-3xl px-5 pb-4 pt-4 sm:px-8">
           <h2 className="font-heading text-xl font-bold text-brand-950 sm:text-2xl">
+            Fiyatınızı Hesaplayın
+          </h2>
+          <p className="mt-2 text-sm text-brand-900/65">
+            Hizmet türünü seçip ölçünüzü girin, tahmini fiyatı hemen görün.
+          </p>
+          <div className="mt-5">
+            <PriceCalculator />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
+          <h2 className="font-heading text-xl font-bold text-brand-950 sm:text-2xl">
             Tesisimizden Görüntüler
           </h2>
           <p className="mt-2 text-sm text-brand-900/65">
@@ -72,7 +84,7 @@ export default function FiyatHesaplaPage() {
           </p>
           <div className="mt-5 flex justify-center">
             <video
-              className="max-h-[70vh] w-auto rounded-2xl shadow-lg"
+              className="w-full max-w-sm rounded-2xl shadow-lg"
               src="/media/tesis-video.mp4"
               controls
               muted
@@ -80,18 +92,6 @@ export default function FiyatHesaplaPage() {
               playsInline
               preload="metadata"
             />
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
-          <h2 className="font-heading text-xl font-bold text-brand-950 sm:text-2xl">
-            Fiyatınızı Hesaplayın
-          </h2>
-          <p className="mt-2 text-sm text-brand-900/65">
-            Hizmet türünü seçip ölçünüzü girin, tahmini fiyatı hemen görün.
-          </p>
-          <div className="mt-5">
-            <PriceCalculator />
           </div>
         </section>
       </main>
