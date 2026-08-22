@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
   { href: "/#hizmetler", label: "Hizmetler" },
-  { href: "/#fiyat-hesapla", label: "Fiyat Hesapla" },
+  { href: "/fiyat-hesapla", label: "Fiyat Hesapla" },
   { href: "/#bolgeler", label: "Bölgeler" },
   { href: "/blog", label: "Blog" },
   { href: "/#iletisim", label: "İletişim" },

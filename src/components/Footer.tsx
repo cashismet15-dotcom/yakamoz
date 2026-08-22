@@ -6,7 +6,7 @@ import { servicePages } from "@/lib/services";
 const quickLinks = [
   { href: "/siparis-ver", label: "Sipariş Ver" },
   { href: "/#hizmetler", label: "Hizmetler" },
-  { href: "/#fiyat-hesapla", label: "Fiyat Hesapla" },
+  { href: "/fiyat-hesapla", label: "Fiyat Hesapla" },
   { href: "/#bolgeler", label: "Bölgeler" },
   { href: "/blog", label: "Blog" },
   { href: "/#iletisim", label: "İletişim" },
