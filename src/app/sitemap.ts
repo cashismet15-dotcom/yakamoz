@@ -26,6 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${siteConfig.url}/hakkimizda`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteConfig.url}/iletisim`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     ...districts.map((district) => ({
       url: `${siteConfig.url}/${district.slug}`,
       lastModified,

@@ -8,9 +8,9 @@ import { siteConfig } from "@/lib/site-config";
 const navLinks = [
   { href: "/#hizmetler", label: "Hizmetler" },
   { href: "/fiyat-hesapla", label: "Fiyat Hesapla" },
-  { href: "/#bolgeler", label: "Bölgeler" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/blog", label: "Blog" },
-  { href: "/#iletisim", label: "İletişim" },
+  { href: "/iletisim", label: "İletişim" },
 ];
 
 export default function Header() {
