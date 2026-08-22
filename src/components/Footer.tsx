@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { districts } from "@/lib/districts";
 import { servicePages } from "@/lib/services";
@@ -16,14 +17,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 font-heading text-lg font-bold text-gold-400">
-                Y
-              </span>
-              <span className="font-heading text-lg font-bold text-white">
-                Yakamoz Halı Yıkama
-              </span>
-            </div>
+            <Image
+              src="/media/logo.png"
+              alt="Yakamoz Halı Yıkama"
+              width={1709}
+              height={801}
+              className="h-20 w-auto rounded-xl bg-white/95 p-2"
+            />
             <p className="mt-4 text-sm italic text-gold-300">
               Temizlikte güven, hizmette kalite!
             </p>

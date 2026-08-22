@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
@@ -18,13 +19,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link href="/" className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-800 text-lg font-bold text-gold-400 font-heading">
-            Y
-          </span>
-          <span className="truncate font-heading text-base font-bold text-brand-900 sm:text-lg lg:text-xl">
-            Yakamoz <span className="hidden text-brand-500 sm:inline">Halı Yıkama</span>
-          </span>
+        <Link href="/" className="flex min-w-0 shrink-0 items-center">
+          <Image
+            src="/media/logo.png"
+            alt="Yakamoz Halı Yıkama"
+            width={1709}
+            height={801}
+            priority
+            className="h-11 w-auto sm:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
