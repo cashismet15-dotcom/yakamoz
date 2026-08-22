@@ -34,8 +34,7 @@ export default function FiyatHesaplaPage() {
             </p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-100/80 sm:text-base">
               Ücretsiz kapıdan alım-teslim ile hizmet veriyoruz. Aşağıdan
-              ölçünüzü girip fiyatınızı hemen görebilir, tesisimizden gerçek
-              görüntüleri izleyebilirsiniz.
+              ölçünüzü girip fiyatınızı hemen görebilirsiniz.
             </p>
             <a
               href={siteConfig.phoneHref}
@@ -71,27 +70,6 @@ export default function FiyatHesaplaPage() {
           </p>
           <div className="mt-5">
             <PriceCalculator />
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
-          <h2 className="font-heading text-xl font-bold text-brand-950 sm:text-2xl">
-            Tesisimizden Görüntüler
-          </h2>
-          <p className="mt-2 text-sm text-brand-900/65">
-            Halılarınız bu tesiste yıkanıyor — merak ettiğiniz süreci
-            yakından izleyebilirsiniz.
-          </p>
-          <div className="mt-5 flex justify-center">
-            <video
-              className="w-full max-w-sm rounded-2xl shadow-lg"
-              src="/media/tesis-video.mp4"
-              controls
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
           </div>
         </section>
 
