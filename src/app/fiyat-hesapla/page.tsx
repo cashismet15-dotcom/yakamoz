@@ -94,6 +94,17 @@ export default function FiyatHesaplaPage() {
             />
           </div>
         </section>
+
+        <section className="border-t border-brand-100 bg-brand-50/60 px-5 py-14 text-center sm:px-8 sm:py-16">
+          <p className="font-heading text-2xl font-bold text-brand-950 sm:text-3xl">
+            Evinizin Hak Ettiği Hizmet,{" "}
+            <span className="text-gold-500">Yakamoz</span> Güvencesiyle
+          </p>
+          <p className="mx-auto mt-3 max-w-xl text-brand-900/70">
+            Her halıya kendi evimizdeymiş gibi özen gösteriyoruz —
+            çünkü eviniz sizin için en değerlisi.
+          </p>
+        </section>
       </main>
       <Footer />
       <WhatsappButton />
