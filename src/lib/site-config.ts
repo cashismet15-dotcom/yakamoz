@@ -2,8 +2,8 @@
 // telefon, hizmet bölgesi ve saatler siteye buradan otomatik yansır.
 export const siteConfig = {
   name: "Yakamoz Halı Yıkama",
-  domain: "yakamozhaliyikama.com.tr",
-  url: "https://yakamozhaliyikama.com.tr",
+  domain: "www.yakamozhaliyikama.com.tr",
+  url: "https://www.yakamozhaliyikama.com.tr",
   phoneDisplay: "0850 840 93 03",
   phoneHref: "tel:+908508409303",
   whatsappHref: "https://wa.me/908508409303",
