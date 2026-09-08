@@ -1,61 +1,88 @@
 "use client";
 
 import { useMemo, useState, type FormEvent } from "react";
-import {
-  carpetPricing,
-  storPerdePricePerMetre,
-  yorganBattaniyePricePerAdet,
-} from "@/lib/pricing";
+import { getCityPricing, pricingCities } from "@/lib/pricing";
 import { siteConfig } from "@/lib/site-config";
 
-type Tab = "hali" | "stor-perde" | "yorgan-battaniye";
+type Tab = "hali" | "perde" | "yorgan-battaniye" | "overlok";
 
-const tabs: { id: Tab; label: string }[] = [
-  { id: "hali", label: "Halı Yıkama" },
-  { id: "stor-perde", label: "Stor Perde" },
-  { id: "yorgan-battaniye", label: "Yorgan & Battaniye" },
-];
+const tabLabels: Record<Tab, string> = {
+  hali: "Halı Yıkama",
+  perde: "Perde",
+  "yorgan-battaniye": "Yorgan & Battaniye",
+  overlok: "Overlok",
+};
 
 function formatTL(value: number) {
   return `${value.toLocaleString("tr-TR", { maximumFractionDigits: 0 })} ₺`;
 }
 
 export default function OrderForm() {
-  const [tab, setTab] = useState<Tab>("hali");
-  const [carpetType, setCarpetType] = useState(carpetPricing[0].type);
+  const [city, setCity] = useState(pricingCities[0]);
+  const pricing = getCityPricing(city);
+
+  const [tabInput, setTab] = useState<Tab>("hali");
+  const [carpetTypeInput, setCarpetType] = useState(pricing.carpets[0].type);
+  const [perdeTypeInput, setPerdeType] = useState(pricing.perde[0].type);
   const [m2, setM2] = useState("");
   const [metre, setMetre] = useState("");
   const [adet, setAdet] = useState("");
+  const [overlokMetre, setOverlokMetre] = useState("");
 
   const [orderStep, setOrderStep] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  const selectedCarpet = carpetPricing.find((c) => c.type === carpetType);
+  const tabs: Tab[] = [
+    "hali",
+    "perde",
+    "yorgan-battaniye",
+    ...(pricing.overlokPerMetre ? (["overlok"] as Tab[]) : []),
+  ];
+
+  // Sehir degisince secili tur/sekme, o sehrin listesinde yoksa varsayilana duser
+  const tab: Tab =
+    tabInput === "overlok" && !pricing.overlokPerMetre ? "hali" : tabInput;
+  const carpetType = pricing.carpets.some((c) => c.type === carpetTypeInput)
+    ? carpetTypeInput
+    : pricing.carpets[0].type;
+  const perdeType = pricing.perde.some((p) => p.type === perdeTypeInput)
+    ? perdeTypeInput
+    : pricing.perde[0].type;
+
+  const selectedCarpet = pricing.carpets.find((c) => c.type === carpetType);
+  const selectedPerde = pricing.perde.find((p) => p.type === perdeType);
 
   const result = useMemo(() => {
     if (tab === "hali") {
       const value = parseFloat(m2.replace(",", "."));
-      if (!value || value <= 0 || !selectedCarpet?.pricePerM2) return null;
+      if (!value || value <= 0 || !selectedCarpet) return null;
       return value * selectedCarpet.pricePerM2;
     }
-    if (tab === "stor-perde") {
+    if (tab === "perde") {
       const value = parseFloat(metre.replace(",", "."));
-      if (!value || value <= 0) return null;
-      return value * storPerdePricePerMetre;
+      if (!value || value <= 0 || !selectedPerde) return null;
+      return value * selectedPerde.pricePerMetre;
+    }
+    if (tab === "overlok") {
+      const value = parseFloat(overlokMetre.replace(",", "."));
+      if (!value || value <= 0 || !pricing.overlokPerMetre) return null;
+      return value * pricing.overlokPerMetre;
     }
     const value = parseFloat(adet.replace(",", "."));
     if (!value || value <= 0) return null;
-    return value * yorganBattaniyePricePerAdet;
-  }, [tab, m2, metre, adet, selectedCarpet]);
+    return value * pricing.yorganBattaniyePerAdet;
+  }, [tab, m2, metre, adet, overlokMetre, selectedCarpet, selectedPerde, pricing]);
 
   const detailLabel =
     tab === "hali"
       ? `${carpetType}, ${m2} m²`
-      : tab === "stor-perde"
-        ? `Stor perde, ${metre} metre`
-        : `Yorgan/Battaniye, ${adet} adet`;
+      : tab === "perde"
+        ? `${perdeType}, ${metre} metre`
+        : tab === "overlok"
+          ? `Overlok, ${overlokMetre} metre`
+          : `Yorgan/Battaniye, ${adet} adet`;
 
   const fieldClass =
     "w-full rounded-xl border border-brand-100 bg-white px-4 py-3 text-base sm:text-sm text-brand-950 outline-none transition focus:border-brand-400 focus:ring-2 focus:ring-brand-400/20";
@@ -69,7 +96,8 @@ export default function OrderForm() {
 
     const lines = [
       "SİPARİŞ TALEBİ",
-      `Hizmet: ${tabs.find((t) => t.id === tab)?.label}`,
+      `Şehir: ${city}`,
+      `Hizmet: ${tabLabels[tab]}`,
       `Detay: ${detailLabel}`,
       `Tahmini Fiyat: ${formatTL(result)}`,
       "—",
@@ -102,7 +130,7 @@ export default function OrderForm() {
             Siparişiniz
           </p>
           <p className="mt-1 text-sm text-brand-900/80">
-            {tabs.find((t) => t.id === tab)?.label} — {detailLabel}
+            {city} — {tabLabels[tab]} — {detailLabel}
           </p>
           <p className="mt-2 font-heading text-2xl font-bold text-brand-950">
             {result !== null ? formatTL(result) : ""}
@@ -173,26 +201,41 @@ export default function OrderForm() {
   return (
     <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm sm:p-7">
       <p className="font-heading text-lg font-bold text-brand-950">
-        Ölçünüzü Girin, Fiyatı Görün
+        Şehri ve Ölçünüzü Girin, Fiyatı Görün
       </p>
       <p className="mt-1 text-sm text-brand-900/65">
-        Hizmet türünü seçip ölçüyü girin — fiyat çıkınca &quot;Sipariş
+        Şehri ve hizmet türünü seçip ölçüyü girin — fiyat çıkınca &quot;Sipariş
         Ver&quot;e tıklayarak devam edin.
       </p>
+
+      <label className="mt-5 block text-sm">
+        <span className="mb-1.5 block font-medium text-brand-900/80">Şehir</span>
+        <select
+          className={fieldClass}
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        >
+          {pricingCities.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </label>
 
       <div className="mt-5 flex flex-wrap gap-2">
         {tabs.map((t) => (
           <button
-            key={t.id}
+            key={t}
             type="button"
-            onClick={() => setTab(t.id)}
+            onClick={() => setTab(t)}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-              tab === t.id
+              tab === t
                 ? "bg-brand-600 text-white"
                 : "bg-brand-50 text-brand-700 hover:bg-brand-100"
             }`}
           >
-            {t.label}
+            {tabLabels[t]}
           </button>
         ))}
       </div>
@@ -209,7 +252,7 @@ export default function OrderForm() {
                 value={carpetType}
                 onChange={(e) => setCarpetType(e.target.value)}
               >
-                {carpetPricing.map((c) => (
+                {pricing.carpets.map((c) => (
                   <option key={c.type} value={c.type}>
                     {c.type} — {c.pricePerM2} ₺/m²
                   </option>
@@ -232,26 +275,44 @@ export default function OrderForm() {
           </>
         )}
 
-        {tab === "stor-perde" && (
-          <label className="block text-sm sm:col-span-2">
-            <span className="mb-1.5 block font-medium text-brand-900/80">
-              Metre ({storPerdePricePerMetre} ₺/metre)
-            </span>
-            <input
-              type="text"
-              inputMode="decimal"
-              className={fieldClass}
-              placeholder="Örn: 3"
-              value={metre}
-              onChange={(e) => setMetre(e.target.value)}
-            />
-          </label>
+        {tab === "perde" && (
+          <>
+            <label className="block text-sm">
+              <span className="mb-1.5 block font-medium text-brand-900/80">
+                Perde Türü
+              </span>
+              <select
+                className={fieldClass}
+                value={perdeType}
+                onChange={(e) => setPerdeType(e.target.value)}
+              >
+                {pricing.perde.map((p) => (
+                  <option key={p.type} value={p.type}>
+                    {p.type} — {p.pricePerMetre} ₺/metre
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="block text-sm">
+              <span className="mb-1.5 block font-medium text-brand-900/80">
+                Metre
+              </span>
+              <input
+                type="text"
+                inputMode="decimal"
+                className={fieldClass}
+                placeholder="Örn: 3"
+                value={metre}
+                onChange={(e) => setMetre(e.target.value)}
+              />
+            </label>
+          </>
         )}
 
         {tab === "yorgan-battaniye" && (
           <label className="block text-sm sm:col-span-2">
             <span className="mb-1.5 block font-medium text-brand-900/80">
-              Adet ({yorganBattaniyePricePerAdet} ₺/adet)
+              Adet ({pricing.yorganBattaniyePerAdet} ₺/adet)
             </span>
             <input
               type="text"
@@ -260,6 +321,22 @@ export default function OrderForm() {
               placeholder="Örn: 2"
               value={adet}
               onChange={(e) => setAdet(e.target.value)}
+            />
+          </label>
+        )}
+
+        {tab === "overlok" && (
+          <label className="block text-sm sm:col-span-2">
+            <span className="mb-1.5 block font-medium text-brand-900/80">
+              Metre ({pricing.overlokPerMetre} ₺/metre)
+            </span>
+            <input
+              type="text"
+              inputMode="decimal"
+              className={fieldClass}
+              placeholder="Örn: 4"
+              value={overlokMetre}
+              onChange={(e) => setOverlokMetre(e.target.value)}
             />
           </label>
         )}

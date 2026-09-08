@@ -9,6 +9,19 @@ export default function DistrictPageBody({ district }: { district: District }) {
   const otherDistricts = districts.filter(
     (d) => d.city === district.city && d.slug !== district.slug,
   );
+  const otherCityNames = [...new Set(districts.map((d) => d.city))].filter(
+    (c) => c !== district.city,
+  );
+  const otherCityPages = otherCityNames.map(
+    (c) =>
+      districts.find((d) => d.city === c && d.name === c) ??
+      districts.find((d) => d.city === c)!,
+  );
+  const relatedPages = otherDistricts.length > 0 ? otherDistricts : otherCityPages;
+  const relatedTitle =
+    otherDistricts.length > 0
+      ? `${district.city}'da Diğer Hizmet Bölgelerimiz`
+      : "Diğer Şehirlerde Halı Yıkama";
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -87,10 +100,10 @@ export default function DistrictPageBody({ district }: { district: District }) {
 
       <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
         <h2 className="font-heading text-lg font-bold text-brand-950">
-          {district.city}&apos;da Diğer Hizmet Bölgelerimiz
+          {relatedTitle}
         </h2>
         <div className="mt-4 flex flex-wrap gap-3">
-          {otherDistricts.map((d) => (
+          {relatedPages.map((d) => (
             <a
               key={d.slug}
               href={`/${d.slug}`}

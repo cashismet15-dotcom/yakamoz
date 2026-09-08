@@ -5,8 +5,8 @@ import { siteConfig } from "@/lib/site-config";
 import { districts } from "@/lib/districts";
 import { type ServicePage } from "@/lib/services";
 
-const defaultTabBySlug: Record<string, "hali" | "stor-perde" | "yorgan-battaniye"> = {
-  "stor-perde-yikama": "stor-perde",
+const defaultTabBySlug: Record<string, "hali" | "perde" | "yorgan-battaniye"> = {
+  "stor-perde-yikama": "perde",
   "yorgan-battaniye-yikama": "yorgan-battaniye",
 };
 

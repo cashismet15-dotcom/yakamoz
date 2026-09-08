@@ -5,7 +5,7 @@ import WhatsappButton from "@/components/WhatsappButton";
 import DistrictPageBody from "@/components/DistrictPageBody";
 import { getDistrictBySlug } from "@/lib/districts";
 
-const district = getDistrictBySlug("cankaya-hali-yikama")!;
+const district = getDistrictBySlug("ankara-hali-yikama")!;
 
 export const metadata: Metadata = {
   title: { absolute: district.seoTitle },
