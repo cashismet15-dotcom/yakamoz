@@ -61,10 +61,15 @@ export default function Contact() {
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-400">
               Hizmet Bölgesi
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-brand-100/80">
-              {siteConfig.serviceDistricts.join(", ")}
-            </p>
-            <p className="mt-1 text-xs text-brand-100/50">
+            <div className="mt-2 space-y-2 text-sm leading-relaxed text-brand-100/80">
+              {siteConfig.serviceCities.map((city) => (
+                <p key={city.name}>
+                  <span className="font-semibold text-white">{city.name}:</span>{" "}
+                  {city.districts.join(", ")}
+                </p>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-brand-100/50">
               Ücretsiz kapıdan alım-teslim
             </p>
           </div>

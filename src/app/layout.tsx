@@ -15,9 +15,9 @@ const poppins = Poppins({
 });
 
 const title =
-  "Yakamoz Halı Yıkama | Esenyurt, Avcılar, Beylikdüzü Halı Yıkama";
+  "Yakamoz Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim Halı Yıkama";
 const description =
-  "Yakamoz Halı Yıkama; Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'de ücretsiz kapıdan alım-teslim ile halı, stor perde, yorgan ve battaniye yıkamada garantili hizmet sunar.";
+  "Yakamoz Halı Yıkama; halı, stor perde, yorgan ve battaniye yıkamada ücretsiz kapıdan alım-teslim ve garantili hizmet sunar. Ölçünüzü girin, fiyatınızı anında görün.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -28,14 +28,13 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "halı yıkama",
-    "esenyurt halı yıkama",
-    "avcılar halı yıkama",
-    "beylikdüzü halı yıkama",
-    "başakşehir halı yıkama",
-    "küçükçekmece halı yıkama",
+    "kapıdan alım teslim halı yıkama",
+    "ücretsiz halı yıkama servisi",
     "halı yıkama fabrikası",
     "stor perde yıkama",
     "yorgan yıkama",
+    "battaniye yıkama",
+    "halı yıkama fiyatları",
   ],
   alternates: {
     canonical: "/",

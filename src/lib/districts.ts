@@ -1,6 +1,7 @@
 export type District = {
   slug: string;
   name: string;
+  city: string;
   seoTitle: string;
   metaDescription: string;
   h1: string;
@@ -14,6 +15,7 @@ export const districts: District[] = [
   {
     slug: "esenyurt-hali-yikama",
     name: "Esenyurt",
+    city: "İstanbul",
     seoTitle: "Esenyurt Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
     metaDescription:
       "Esenyurt'ta halı, stor perde, yorgan ve battaniye yıkama; ücretsiz kapıdan alım-teslim ile Pınar, Mehterçeşme, Yeşilkent ve çevresine hizmet veriyoruz. WhatsApp'tan hemen teklif alın.",
@@ -61,6 +63,7 @@ export const districts: District[] = [
   {
     slug: "avcilar-hali-yikama",
     name: "Avcılar",
+    city: "İstanbul",
     seoTitle: "Avcılar Halı Yıkama | Sahil ve Üniversite Bölgesine Ücretsiz Servis",
     metaDescription:
       "Avcılar'da halı, stor perde ve yorgan yıkama hizmeti; Üniversite, Cihangir, Yeşilkent ve tüm mahallelere ücretsiz kapıdan alım-teslim. WhatsApp'tan hemen teklif alın.",
@@ -108,6 +111,7 @@ export const districts: District[] = [
   {
     slug: "beylikduzu-hali-yikama",
     name: "Beylikdüzü",
+    city: "İstanbul",
     seoTitle: "Beylikdüzü Halı Yıkama | E-5 ve TEM Hattına Hızlı Ulaşım",
     metaDescription:
       "Beylikdüzü'nde halı, stor perde, yorgan ve battaniye yıkama; Gürpınar, Yakuplu, Marmara, Kavaklı ve tüm mahallelere ücretsiz kapıdan alım-teslim.",
@@ -156,6 +160,7 @@ export const districts: District[] = [
   {
     slug: "basaksehir-hali-yikama",
     name: "Başakşehir",
+    city: "İstanbul",
     seoTitle: "Başakşehir Halı Yıkama | Kayaşehir ve Bahçeşehir'e Ücretsiz Servis",
     metaDescription:
       "Başakşehir'de halı, stor perde ve yorgan yıkama; Kayabaşı, Başak, Güvercintepe, Bahçeşehir ve çevresine ücretsiz kapıdan alım-teslim hizmeti.",
@@ -205,6 +210,7 @@ export const districts: District[] = [
   {
     slug: "kucukcekmece-hali-yikama",
     name: "Küçükçekmece",
+    city: "İstanbul",
     seoTitle: "Küçükçekmece Halı Yıkama | Halkalı ve Göl Çevresine Servis",
     metaDescription:
       "Küçükçekmece'de halı, stor perde ve yorgan yıkama; Halkalı, Atakent, Kanarya, Sultanmurat ve tüm mahallelere ücretsiz kapıdan alım-teslim hizmeti.",
@@ -257,6 +263,261 @@ export const districts: District[] = [
       {
         question: "Yorgan ve battaniye yıkama için ayrı randevu mu almalıyım?",
         answer: "Hayır, halı ile aynı randevuda yorgan ve battaniyelerinizi de alabiliyoruz.",
+      },
+    ],
+  },
+  {
+    slug: "cankaya-hali-yikama",
+    name: "Çankaya",
+    city: "Ankara",
+    seoTitle: "Çankaya Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
+    metaDescription:
+      "Çankaya'da halı, stor perde, yorgan ve battaniye yıkama; Kızılay, Bahçelievler, Çukurambar, Çayyolu ve Ümitköy dahil tüm mahallelere ücretsiz kapıdan alım-teslim. WhatsApp'tan hemen teklif alın.",
+    h1: "Çankaya Halı Yıkama",
+    intro: [
+      "Çankaya, Ankara'nın en kalabalık ve en geniş ilçesi; Kızılay'daki iş merkezlerinden Çayyolu ve Ümitköy'deki site yaşamına kadar çok farklı yerleşim dokusunu bir arada barındırıyor. Bu yoğunlukta ortak bir sorun var: ağır bir halıyı asansöre sığdırmak, aracınıza yüklemek, bir yıkamacıya götürüp günler sonra geri almak. Yakamoz Halı Yıkama olarak bu işi tersine çeviriyoruz — siz arayın ya da WhatsApp'tan yazın, halılarınızı kapınızdan alıp tertemiz şekilde yine kapınıza teslim edelim.",
+      "Çukurambar ve Çayyolu gibi hızla büyüyen bölgelerde yeni taşınan haneler için halı, stor perde ve yorgan/battaniye yıkama çoğu zaman ilk ihtiyaçlardan biri oluyor. Makina halısından el dokuma ve yün halıya kadar farklı halı türlerini dokusuna zarar vermeden yıkıyor; kesin fiyatı halının türü, ölçüsü ve adedine göre önceden netleştiriyoruz.",
+    ],
+    mahalleler: [
+      "Kızılay",
+      "Bahçelievler",
+      "Ayrancı",
+      "Çukurambar",
+      "Çayyolu",
+      "Ümitköy",
+      "Oran",
+      "Dikmen",
+      "Kavaklıdere",
+      "Gaziosmanpaşa",
+      "Emek",
+      "Yıldız",
+    ],
+    mahalleNote:
+      "Çankaya genelinde ücretsiz kapıdan alım-teslim hizmeti veriyoruz; en yoğun çalıştığımız mahallelerden bazıları yukarıda listelidir.",
+    faq: [
+      {
+        question: "Çankaya'da fiziksel bir şubeniz var mı, halıyı bırakabilir miyim?",
+        answer:
+          "Hayır, müşteriye açık bir mağazamız yok. Tüm hizmet, adresinizden ücretsiz alım ve teslimle yürüyor; siz sadece randevu saatinde evde veya iş yerinde olun, yeterli.",
+      },
+      {
+        question: "Çayyolu ve Ümitköy'e de geliyor musunuz?",
+        answer:
+          "Evet, Çayyolu, Ümitköy ve Çukurambar dahil Çankaya'nın tüm mahallelerinden ücretsiz alım-teslim yapıyoruz.",
+      },
+      {
+        question: "Fiyat nasıl belirleniyor?",
+        answer:
+          "Fiyat; halının türü, ölçüsü ve adedine göre değişir. WhatsApp'tan fotoğraf veya ölçü paylaşarak birkaç dakika içinde net bir teklif alabilirsiniz.",
+      },
+      {
+        question: "Stor perde söküm ve montajını da yapıyor musunuz?",
+        answer:
+          "Evet; stor perdeleriniz sökülür, yıkanır, ütülenir ve talep ederseniz yerine asılır.",
+      },
+    ],
+  },
+  {
+    slug: "kecioren-hali-yikama",
+    name: "Keçiören",
+    city: "Ankara",
+    seoTitle: "Keçiören Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
+    metaDescription:
+      "Keçiören'de halı, stor perde, yorgan ve battaniye yıkama; Etlik, Aktepe, Kalaba, Ovacık ve Bağlum dahil tüm mahallelere ücretsiz kapıdan alım-teslim.",
+    h1: "Keçiören Halı Yıkama",
+    intro: [
+      "Keçiören, Ankara'nın en kalabalık ilçelerinden biri; yoğun apartman ve site dokusuyla, çok katlı binalarda yaşayan aileler için halı taşımak başlı başına bir yük. Yakamoz Halı Yıkama olarak Keçiören'in tamamında ücretsiz kapıdan alım-teslim veriyoruz — halınızı Etlik'teki bir apartmandan da, Bağlum'daki bir müstakil evden de aynı özenle alıp teslim ediyoruz.",
+      "Yeni taşınan haneler için halı, stor perde ve yorgan/battaniye yıkama genellikle ilk sıralarda gelen ihtiyaçlardan. Halılarınızı önce tozundan arındırıyor, ardından köpüklü ve titiz bir yıkamayla tertemiz hale getiriyor, tam kuruma sonrası kapınıza bırakıyoruz.",
+    ],
+    mahalleler: [
+      "Etlik",
+      "Aktepe",
+      "Kalaba",
+      "Ovacık",
+      "Bağlum",
+      "Sancaktepe",
+      "Pınarbaşı",
+      "Güçlükaya",
+      "Yükseltepe",
+      "Kuşcağız",
+      "Aşağı Eğlence",
+      "Şenlik",
+    ],
+    mahalleNote:
+      "Keçiören'in mahallelerinin tamamına ücretsiz kapıdan alım-teslim ile hizmet veriyoruz.",
+    faq: [
+      {
+        question: "Keçiören'de alım-teslim gerçekten ücretsiz mi?",
+        answer:
+          "Evet, Keçiören sınırları içinde alım ve teslim tamamen ücretsiz; sadece yıkama bedeli alınır.",
+      },
+      {
+        question: "Hangi halı türlerini yıkıyorsunuz?",
+        answer:
+          "Makina halısı, bambu halı, akrilik halı, el dokuma halı ve yün (makina yün dahil) halı türlerini yıkıyoruz.",
+      },
+      {
+        question: "Yorgan ve battaniyeleri de aynı seferde verebilir miyim?",
+        answer:
+          "Evet, halı ile birlikte yorgan ve battaniyelerinizi de aynı alım-teslim turunda gönderebilirsiniz.",
+      },
+      {
+        question: "Randevu saatini nasıl belirliyoruz?",
+        answer:
+          "Telefon veya WhatsApp üzerinden yazışarak size uygun gün ve saati birlikte netleştiriyoruz.",
+      },
+    ],
+  },
+  {
+    slug: "mamak-hali-yikama",
+    name: "Mamak",
+    city: "Ankara",
+    seoTitle: "Mamak Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
+    metaDescription:
+      "Mamak'ta halı, stor perde, yorgan ve battaniye yıkama; Abidinpaşa, Tuzluçayır, Akdere, Kayaş ve Türközü dahil tüm mahallelere ücretsiz kapıdan alım-teslim.",
+    h1: "Mamak Halı Yıkama",
+    intro: [
+      "Mamak, Ankara'nın doğusunda geniş bir alana yayılan, hem yerleşik mahalleleri hem de yeni kentsel dönüşüm bölgeleriyle sürekli değişen bir ilçe. Yakamoz Halı Yıkama olarak Mamak'ın tamamında ücretsiz kapıdan alım-teslim hizmeti veriyoruz; halınızı yıkama noktasına siz taşımadan, kapınızdan alıp tertemiz şekilde geri getiriyoruz.",
+      "Kentsel dönüşümle yeni dairelere taşınan haneler için halı, stor perde ve yorgan/battaniye yıkama taşınma sonrası ilk işlerden biri oluyor. Farklı halı türlerini dokusuna uygun yöntemlerle yıkıyor, kesin fiyatı halının türü ve ölçüsüne göre önceden söylüyoruz.",
+    ],
+    mahalleler: [
+      "Abidinpaşa",
+      "Tuzluçayır",
+      "Akdere",
+      "Kayaş",
+      "Türközü",
+      "Ege",
+      "Kültür",
+      "Şafaktepe",
+      "Boğaziçi",
+      "Misket",
+      "Gülveren",
+      "Kartaltepe",
+    ],
+    mahalleNote:
+      "Mamak genelinde ücretsiz kapıdan alım-teslim hizmeti veriyoruz; en yoğun çalıştığımız mahallelerden bazıları yukarıda listelidir.",
+    faq: [
+      {
+        question: "Mamak'ta fiziksel şubeniz var mı?",
+        answer:
+          "Hayır, müşteriye açık bir dükkanımız yok. Hizmet tamamen adresinizden ücretsiz alım ve teslimle yürüyor.",
+      },
+      {
+        question: "Kayaş ve Abidinpaşa'ya geliyor musunuz?",
+        answer:
+          "Evet, Kayaş, Abidinpaşa ve Türközü dahil Mamak'ın tüm mahallelerinden ücretsiz alım-teslim yapıyoruz.",
+      },
+      {
+        question: "Fiyat nasıl belirleniyor?",
+        answer:
+          "Halının türü, ölçüsü ve adedine göre; WhatsApp'tan ölçü veya fotoğraf paylaşarak hemen net teklif alabilirsiniz.",
+      },
+      {
+        question: "Koltuk yıkama hizmetiniz var mı?",
+        answer:
+          "Şu an için hayır — halı, stor perde, yorgan ve battaniye yıkama konusunda uzmanlaştık.",
+      },
+    ],
+  },
+  {
+    slug: "yenimahalle-hali-yikama",
+    name: "Yenimahalle",
+    city: "Ankara",
+    seoTitle: "Yenimahalle Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
+    metaDescription:
+      "Yenimahalle'de halı, stor perde, yorgan ve battaniye yıkama; Batıkent, Demetevler, Ostim, Şentepe ve Ragıp Tüzün dahil tüm mahallelere ücretsiz kapıdan alım-teslim.",
+    h1: "Yenimahalle Halı Yıkama",
+    intro: [
+      "Yenimahalle, Batıkent'in planlı site dokusundan Demetevler ve Şentepe'nin yoğun apartman bölgelerine, Ostim ve İvedik'in sanayi alanlarına kadar geniş bir yelpazeyi kapsıyor. Bu çeşitlilik halı bakımında da farklı ihtiyaçlar doğuruyor; Yakamoz Halı Yıkama olarak hepsine tek bir modelle cevap veriyoruz: halınızı kapınızdan alır, tesisimizde yıkar, tertemiz ve kurumuş şekilde yine kapınıza teslim ederiz.",
+      "Batıkent gibi geniş sitelerde aynı bloktan birden fazla daireden alımı tek randevuda planlayabiliyoruz. Makina halısından el dokuma ve yün halıya kadar farklı türleri, dokusuna zarar vermeden yıkıyoruz.",
+    ],
+    mahalleler: [
+      "Batıkent",
+      "Demetevler",
+      "Ostim",
+      "İvedik",
+      "Şentepe",
+      "Ragıp Tüzün",
+      "Yuvaköy",
+      "Serhat",
+      "Karşıyaka",
+      "Çamlıca",
+      "Yakacık",
+      "Pamuklar",
+    ],
+    mahalleNote:
+      "Yenimahalle'nin mahallelerinin tamamına ücretsiz kapıdan alım-teslim ile hizmet veriyoruz.",
+    faq: [
+      {
+        question: "Batıkent'te site içinden toplu alım yapıyor musunuz?",
+        answer:
+          "Evet, aynı sitede birden fazla daireden halı, perde ve yorgan alımını tek randevuda planlayabiliyoruz.",
+      },
+      {
+        question: "Stor perde yıkama için de aynı hizmet geçerli mi?",
+        answer:
+          "Evet — stor perdeleriniz sökülür, yıkanır, ütülenir ve talep ederseniz yerine asılır.",
+      },
+      {
+        question: "İş yerim/ofisim için halı yıkama talep edebilir miyim?",
+        answer:
+          "Evet, konut halılarının yanında Ostim ve İvedik bölgesindeki iş yerleri için de talep üzerine hizmet veriyoruz.",
+      },
+      {
+        question: "Alım ve teslim sırasında evde bulunmam şart mı?",
+        answer:
+          "Sizin veya yetkilendirdiğiniz birinin adreste olması yeterli; randevu saatini önceden birlikte belirliyoruz.",
+      },
+    ],
+  },
+  {
+    slug: "altindag-hali-yikama",
+    name: "Altındağ",
+    city: "Ankara",
+    seoTitle: "Altındağ Halı Yıkama | Ücretsiz Kapıdan Alım-Teslim",
+    metaDescription:
+      "Altındağ'da halı, stor perde, yorgan ve battaniye yıkama; Aydınlıkevler, Siteler, Ulus, Solfasol ve Karapürçek dahil tüm mahallelere ücretsiz kapıdan alım-teslim.",
+    h1: "Altındağ Halı Yıkama",
+    intro: [
+      "Altındağ, Ankara'nın en eski yerleşim bölgelerini — Ulus, Hamamönü, Hacı Bayram — barındırırken, Aydınlıkevler ve Karapürçek gibi modern konut alanlarıyla da büyüyen bir ilçe. Siteler ise Türkiye'nin en büyük mobilyacılar çarşısı olarak ilçeye ayrı bir hareketlilik katıyor. Yakamoz Halı Yıkama olarak Altındağ'ın tamamında, hem konut hem de talep eden iş yerleri için ücretsiz kapıdan alım-teslim ile çalışıyoruz.",
+      "Yeni taşınan haneler için halı, stor perde ve yorgan/battaniye yıkama taşınma sonrası ilk ihtiyaçlardan biri oluyor. Halılarınızı önce tozundan arındırıyor, ardından köpüklü ve titiz bir yıkamayla tertemiz hale getiriyoruz.",
+    ],
+    mahalleler: [
+      "Aydınlıkevler",
+      "Siteler",
+      "Ulus",
+      "Solfasol",
+      "Karapürçek",
+      "Hamamönü",
+      "Battalgazi",
+      "Önder",
+      "Gültepe",
+      "Baraç",
+      "Zübeyde Hanım",
+      "Hacı Bayram",
+    ],
+    mahalleNote:
+      "Altındağ genelinde ücretsiz kapıdan alım-teslim hizmeti veriyoruz; en yoğun çalıştığımız mahallelerden bazıları yukarıda listelidir.",
+    faq: [
+      {
+        question: "Altındağ'da alım-teslim ücretli mi?",
+        answer:
+          "Hayır, Altındağ sınırları içinde alım ve teslim tamamen ücretsiz; yalnızca yıkama bedeli alınır.",
+      },
+      {
+        question: "Siteler'deki iş yerim için halı ve döşeme temizliği yaptırabilir miyim?",
+        answer:
+          "Evet, konut halılarının yanında Siteler bölgesindeki iş yerleri için de talep üzerine hizmet veriyoruz.",
+      },
+      {
+        question: "Hangi halı türlerini yıkıyorsunuz?",
+        answer:
+          "Makina halısı, bambu halı, akrilik halı, el dokuma halı ve yün (makina yün dahil) halı türlerini yıkıyoruz.",
+      },
+      {
+        question: "Yorgan ve battaniye için ayrı randevu mu almalıyım?",
+        answer:
+          "Hayır, halı ile aynı randevuda yorgan ve battaniyelerinizi de alabiliyoruz.",
       },
     ],
   },

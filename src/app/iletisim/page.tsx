@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 export const metadata: Metadata = {
   title: { absolute: "İletişim | Yakamoz Halı Yıkama" },
   description:
-    "Yakamoz Halı Yıkama'ya telefon, WhatsApp veya e-posta ile ulaşın. Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'de ücretsiz kapıdan alım-teslim.",
+    "Yakamoz Halı Yıkama'ya telefon, WhatsApp veya e-posta ile ulaşın. Ankara ve İstanbul'da ücretsiz kapıdan alım-teslim ile halı, stor perde ve yorgan yıkama.",
   alternates: { canonical: "/iletisim" },
 };
 

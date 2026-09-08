@@ -89,10 +89,14 @@ export default function QuoteForm({
             value={district}
             onChange={(e) => setDistrict(e.target.value)}
           >
-            {siteConfig.serviceDistricts.map((d) => (
-              <option key={d} value={d}>
-                {d}
-              </option>
+            {siteConfig.serviceCities.map((city) => (
+              <optgroup key={city.name} label={city.name}>
+                {city.districts.map((d) => (
+                  <option key={d} value={d}>
+                    {d}
+                  </option>
+                ))}
+              </optgroup>
             ))}
           </select>
         </label>

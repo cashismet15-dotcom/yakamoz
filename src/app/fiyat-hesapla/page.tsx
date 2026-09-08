@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: { absolute: "Fiyat Hesapla | Yakamoz Halı Yıkama" },
   description:
-    "Halı, stor perde veya yorgan/battaniye yıkama fiyatınızı hemen hesaplayın. Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'de ücretsiz kapıdan alım-teslim.",
+    "Halı, stor perde veya yorgan/battaniye yıkama fiyatınızı hemen hesaplayın. Hizmet verdiğimiz tüm ilçelerde ücretsiz kapıdan alım-teslim.",
   alternates: { canonical: "/fiyat-hesapla" },
 };
 
@@ -30,7 +30,7 @@ export default function FiyatHesaplaPage() {
               Yakamoz Halı Yıkama
             </h1>
             <p className="mt-3 text-base text-brand-100/90 sm:text-lg">
-              Esenyurt · Avcılar · Beylikdüzü · Başakşehir · Küçükçekmece
+              Ücretsiz Kapıdan Alım-Teslim
             </p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-100/80 sm:text-base">
               Ücretsiz kapıdan alım-teslim ile hizmet veriyoruz. Aşağıdan

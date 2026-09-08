@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Yakamoz'u tercih etme sebepleri",
         paragraphs: [
-          "Yakamoz Halı Yıkama olarak Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'nin tamamında ücretsiz kapıdan alım-teslim sağlıyoruz. Fiyatı halının türü ve ölçüsüne göre WhatsApp üzerinden netleştiriyor, sürpriz ücret uygulamıyoruz. Sorularınız için WhatsApp'tan bize ulaşabilirsiniz.",
+          "Yakamoz Halı Yıkama olarak hizmet verdiğimiz tüm ilçelerde ücretsiz kapıdan alım-teslim sağlıyoruz. Fiyatı halının türü ve ölçüsüne göre WhatsApp üzerinden netleştiriyor, sürpriz ücret uygulamıyoruz. Sorularınız için WhatsApp'tan bize ulaşabilirsiniz.",
         ],
       },
     ],
@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Yakamoz'da yorgan ve battaniye yıkama",
         paragraphs: [
-          "Yorgan ve battaniyelerinizi alerjik hassasiyete uygun şekilde yüksek sıcaklıkta hijyenik olarak yıkıyor, tam kuruma garantisiyle teslim ediyoruz. Halınızla birlikte veya ayrı olarak, Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve Küçükçekmece'nin tamamında ücretsiz kapıdan alım-teslim ile gönderebilirsiniz.",
+          "Yorgan ve battaniyelerinizi alerjik hassasiyete uygun şekilde yüksek sıcaklıkta hijyenik olarak yıkıyor, tam kuruma garantisiyle teslim ediyoruz. Halınızla birlikte veya ayrı olarak, hizmet verdiğimiz tüm ilçelerde ücretsiz kapıdan alım-teslim ile gönderebilirsiniz.",
         ],
       },
     ],

@@ -6,7 +6,9 @@ import { districts, type District } from "@/lib/districts";
 import { servicePages } from "@/lib/services";
 
 export default function DistrictPageBody({ district }: { district: District }) {
-  const otherDistricts = districts.filter((d) => d.slug !== district.slug);
+  const otherDistricts = districts.filter(
+    (d) => d.city === district.city && d.slug !== district.slug,
+  );
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -85,7 +87,7 @@ export default function DistrictPageBody({ district }: { district: District }) {
 
       <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
         <h2 className="font-heading text-lg font-bold text-brand-950">
-          Diğer Hizmet Bölgelerimiz
+          {district.city}&apos;da Diğer Hizmet Bölgelerimiz
         </h2>
         <div className="mt-4 flex flex-wrap gap-3">
           {otherDistricts.map((d) => (

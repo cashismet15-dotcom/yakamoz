@@ -70,15 +70,24 @@ export default function Footer() {
             <h3 className="font-heading text-sm font-bold text-white">
               Hizmet Bölgeleri
             </h3>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {districts.map((d) => (
-                <li key={d.slug}>
-                  <a href={`/${d.slug}`} className="hover:text-gold-300">
-                    {d.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {siteConfig.serviceCities.map((city) => (
+              <div key={city.name} className="mt-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-gold-300/80">
+                  {city.name}
+                </p>
+                <ul className="mt-2 space-y-2.5 text-sm">
+                  {districts
+                    .filter((d) => d.city === city.name)
+                    .map((d) => (
+                      <li key={d.slug}>
+                        <a href={`/${d.slug}`} className="hover:text-gold-300">
+                          {d.name}
+                        </a>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
           <div>
@@ -97,7 +106,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-brand-100/60">
-                {siteConfig.serviceDistricts.join(", ")}
+                {siteConfig.serviceCities.map((c) => c.name).join(" & ")} — ücretsiz
+                kapıdan alım-teslim
               </li>
             </ul>
           </div>

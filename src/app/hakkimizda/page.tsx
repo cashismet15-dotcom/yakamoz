@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: { absolute: "Hakkımızda | Yakamoz Halı Yıkama" },
   description:
-    "Yakamoz Halı Yıkama; geniş tesisi, tam otomatik makineleri ve leke çıkarma uzmanlığıyla İstanbul Avrupa Yakası'nda fabrikadan doğrudan, ücretsiz kapıdan alım-teslim hizmeti sunar.",
+    "Yakamoz Halı Yıkama; geniş tesisi, tam otomatik makineleri ve leke çıkarma uzmanlığıyla Ankara ve İstanbul'da fabrikadan doğrudan, ücretsiz kapıdan alım-teslim hizmeti sunar.",
   alternates: { canonical: "/hakkimizda" },
 };
 
@@ -34,13 +34,11 @@ export default function HakkimizdaPage() {
 
           <div className="mt-6 space-y-4 leading-relaxed text-brand-900/75">
             <p>
-              Yakamoz Halı Yıkama olarak İstanbul Avrupa Yakası&apos;nda —
-              Esenyurt, Avcılar, Beylikdüzü, Başakşehir ve
-              Küçükçekmece&apos;de — halı, stor perde ve yorgan/battaniye
-              yıkama hizmeti veriyoruz. Müşteriye açık bir mağazamız yok;
-              bunun yerine geniş tesisimizde, tam otomatik makinelerle
-              çalışıyor ve halınızı kapınızdan alıp yine kapınıza teslim
-              ediyoruz.
+              Yakamoz Halı Yıkama olarak Ankara ve İstanbul&apos;da halı, stor
+              perde ve yorgan/battaniye yıkama hizmeti veriyoruz. Müşteriye
+              açık bir mağazamız yok; bunun yerine geniş tesisimizde, tam
+              otomatik makinelerle çalışıyor ve halınızı kapınızdan alıp yine
+              kapınıza teslim ediyoruz.
             </p>
             <p>
               Klasik halı yıkama anlayışında müşteri ya halıyı bir dükkana
@@ -93,8 +91,8 @@ export default function HakkimizdaPage() {
                 Ücretsiz Kapıdan Alım-Teslim
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-brand-900/70">
-                5 ilçenin tamamında, hiçbir ek ücret olmadan kapınızdan
-                alıp kapınıza teslim ediyoruz.
+                Hizmet verdiğimiz ilçelerin tamamında, hiçbir ek ücret
+                olmadan kapınızdan alıp kapınıza teslim ediyoruz.
               </p>
             </div>
           </div>
